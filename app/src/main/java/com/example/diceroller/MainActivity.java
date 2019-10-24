@@ -16,7 +16,7 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-
+int correct_counter = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,13 +59,22 @@ public class MainActivity extends AppCompatActivity {
     public void on_click_button(View view) {
 
         TextView tv = this.findViewById(R.id.numberTextView);
+        TextView et = this.findViewById(R.id.editText);
+        TextView tv2 = this.findViewById(R.id.textView2);
 
         Random r = new Random();
-        int number = r.nextInt(7 - 1) + 1;
-        try {
-            tv.setText(number);
-        } catch (Exception ex) {
-            tv.setText(Integer.toString(number));
+        int number = r.nextInt(6);
+        tv.setText(Integer.toString(number));
+        String value= et.getText().toString();
+        int Fnumber= Integer.parseInt(value);
+
+        if(number == Fnumber) {
+
+            tv.setText(String.valueOf(number)+ " " + "Congratulations!");
+            tv2.setText(String.valueOf(correct_counter));
+            correct_counter++;
         }
+
+
     }
 }

@@ -22,15 +22,17 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="on_click_button"
-        android:text="Roll the dice"
+        android:layout_width="343dp"
+        android:layout_height="62dp"
+        android:onClick="on_click_button1"
+        android:text="I am feeling lucky"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numberTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/numberTextView"
+        app:layout_constraintVertical_bias="0.611" />
 
     <EditText
         android:id="@+id/editText"
@@ -58,12 +60,17 @@
         app:layout_constraintTop_toBottomOf="@+id/numberTextView"
         app:layout_constraintVertical_bias="0.319" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="51dp" />
+    <Button
+        android:id="@+id/IceBreakers"
+        android:layout_width="341dp"
+        android:layout_height="72dp"
+        android:onClick="on_button_click_IceBr"
+        android:text="D-ICEBREAKERS"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
